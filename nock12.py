@@ -5,5 +5,3 @@ for i in range(len(str)):
         ans += str[i]
 
 print(ans)
-
-ans1 = str[0:6:2]
