@@ -2,12 +2,14 @@ import random
 
 def typoglycemia(str):
     shuffle = []
-    for i in str.split():
-        if len(i) > 4:
-            i = i[:1] + ''.join(random.sample(i[1:-1], len(i)-2)) + i[-1:]
-        shuffle.append(i)
+    for word in str.split():
+        if len(word) > 4:
+            randomword = ''.join(random.sample(word[1:-1], len(word[1:-1])))
+            word = word[:1] + randomword + word[-1:]
+        shuffle.append(word)
+        
     return ' '.join(shuffle)
 
 
 X = input('str:')
-print(typoglycemia(X))
+print('shuffle:', typoglycemia(X))

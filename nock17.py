@@ -4,17 +4,16 @@ def ngram(n, strn):
 str1 = 'paraparaparadise'
 str2 = 'paragraph'
 
-str3 = ngram(2, str1)
-str4 = ngram(2, str2)
+str1_ngram = ngram(2, str1)
+str2_ngram = ngram(2, str2)
 
 print('X = ', ngram(2, str1))
-
 print('Y = ', ngram(2, str2))
 
-print('和集合：', set(str3) | set(str4))
-print('積集合：', set(str3) & set(str4))
-print('差集合：', set(str3) - set(str4))
+print('和集合：', set(str1_ngram) | set(str2_ngram))
+print('積集合：', set(str1_ngram) & set(str2_ngram))
+print('差集合：', set(str1_ngram) - set(str2_ngram))
 
 Z = {('s', 'e')}
-print('Xにseが含まれるか:', Z <= set(str3))
-print('Yにseが含まれるか:', Z <= set(str4))
+print('seがXに含まれるか:', Z <= set(str1_ngram))
+print('seがYに含まれるか:', Z <= set(str2_ngram))

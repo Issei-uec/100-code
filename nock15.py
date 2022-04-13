@@ -4,13 +4,14 @@ erase_com_pir = erase_com.replace('.','')
 split_str = erase_com_pir.split()
 
 ans = []
-order = 1
+number = 1
 for i in split_str:
-    if order==1 or order==5 or order==6 or order==7 or order==8 or order==9 or order==15 or order==16 or order==19:
-        letter = i[0]
+    if number==1 or number==5 or number==6 or number==7 or number==8 or number==9 or number==15 or number==16 or number==19:
+        elem = i[0]
     else:
-        letter = i[0:2]
-    ans.append(letter)
-    order = order+1
+        elem = i[0:2]
+
+    ans.append(elem)
+    number = number+1
 
 print(ans)
