@@ -1,5 +1,15 @@
 def ngram(n, strn):
-    return list(zip(*[strn[i:] for i in range(n)]))
+    main_list = []
+    for i in range(len(strn)-n+1):
+        sub_list = []
+        for j in range(n):
+            sub_list.append(strn[i+j])
+        main_list.append(sub_list)     
+    return main_list 
+
+#ngramはできたが、表示方法がリストの中にリストとなっていて見にくいため、改善の余地あり
+    
+    
 
 str = 'I am an NLPer'
 erase_com = str.replace(',','')
