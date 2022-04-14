@@ -8,8 +8,15 @@ def cipher(str):
             
     return code
 
-original_sentense = input('原文：')
+original_sentense = input('原文: ')
 print('暗号化：', cipher(original_sentense))
 
 code_sentense = cipher(original_sentense)
 print('複合化：', cipher(code_sentense))
+
+"""
+実行結果:
+原文: OkudAissEi
+暗号化： OpfwArhhEr
+複合化： OkudAissEi
+"""

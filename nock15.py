@@ -15,3 +15,5 @@ for i in split_str:
     number = number+1
 
 print(ans)
+
+#実行結果：['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mi', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca']

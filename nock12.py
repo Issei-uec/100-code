@@ -5,3 +5,5 @@ for i in range(len(str)):
         ans += str[i]
 
 print(ans)
+
+#実行結果：タクシー
