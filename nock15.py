@@ -4,16 +4,16 @@ erase_com_pir = erase_com.replace('.','')
 split_str = erase_com_pir.split()
 
 ans = []
+dict01 = {}
+number1 = [1, 5, 6, 7, 8, 9, 15, 16, 19]
 number = 1
 for i in split_str:
-    if number==1 or number==5 or number==6 or number==7 or number==8 or number==9 or number==15 or number==16 or number==19:
-        elem = i[0]
+    if number in number1:
+        dict01[i[0]] = number
     else:
-        elem = i[0:2]
-
-    ans.append(elem)
+        dict01[i[0:2]] = number
     number = number+1
 
-print(ans)
+print(dict01)
 
 #実行結果：['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mi', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar', 'K', 'Ca']
