@@ -7,7 +7,8 @@ def ngram(n, strn):
         main_list.append(sub_list)
         main_list[i] = tuple(main_list[i])     
     return main_list 
-
+ 
+ #もっとコンパクトに書けると思う
     
     
 
