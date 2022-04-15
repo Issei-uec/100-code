@@ -4,10 +4,10 @@ def ngram(n, strn):
         sub_list = []
         for j in range(n):
             sub_list.append(strn[i+j])
-        main_list.append(sub_list)     
+        main_list.append(sub_list)
+        main_list[i] = tuple(main_list[i])     
     return main_list 
 
-#ngramはできたが、表示方法がリストの中にリストとなっていて見にくいため、改善の余地あり
     
     
 
@@ -26,7 +26,7 @@ print('文字bigram:', moji_bi)
 
 """
 実行結果：
-単語bigram: [['I', 'am'], ['am', 'an'], ['an', 'NLPer']]
-文字bigram: [['I', ' '], [' ', 'a'], ['a', 'm'], ['m', ' '], [' ', 'a'], ['a', 'n'], ['n', ' '], [' ', 'N'], ['N', 'L'], ['L', 'P'], ['P', 
-'e'], ['e', 'r']]
+単語bigram: [('I', 'am'), ('am', 'an'), ('an', 'NLPer')]
+文字bigram: [('I', ' '), (' ', 'a'), ('a', 'm'), ('m', ' '), (' ', 'a'), ('a', 'n'), ('n', ' '), (' ', 'N'), ('N', 'L'), ('L', 'P'), 
+('P', 'e'), ('e', 'r')]
 """

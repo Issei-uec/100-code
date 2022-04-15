@@ -1,5 +1,12 @@
 def ngram(n, strn):
-    return list(zip(*[strn[i:] for i in range(n)]))
+    main_list = []
+    for i in range(len(strn)-n+1):
+        sub_list = []
+        for j in range(n):
+            sub_list.append(strn[i+j])
+        main_list.append(sub_list)  
+        main_list[i] = tuple(main_list[i])   
+    return main_list 
 
 str1 = 'paraparaparadise'
 str2 = 'paragraph'
