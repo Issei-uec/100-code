@@ -4,10 +4,11 @@ def ngram(n, strn):
         sub_list = []
         for j in range(n):
             sub_list.append(strn[i+j])
-        main_list.append(sub_list)     
+        main_list.append(sub_list)
+        main_list[i] = tuple(main_list[i])     
     return main_list 
-
-#ngramはできたが、表示方法がリストの中にリストとなっていて見にくいため、改善の余地あり
+ 
+ #もっとコンパクトに書けると思う
     
     
 
@@ -16,8 +17,17 @@ erase_com = str.replace(',','')
 erase_com_pir = erase_com.replace('.','')
 split_str = erase_com_pir.split()
 
-moji_bi = ngram(2, str)
-tng_bi = ngram(2, split_str)
+#split_str = str.split()
 
-print(tng_bi)
-print(moji_bi)
+tng_bi = ngram(2, split_str)
+moji_bi = ngram(2, str)
+
+print('単語bigram:', tng_bi)
+print('文字bigram:', moji_bi)
+
+"""
+実行結果：
+単語bigram: [('I', 'am'), ('am', 'an'), ('an', 'NLPer')]
+文字bigram: [('I', ' '), (' ', 'a'), ('a', 'm'), ('m', ' '), (' ', 'a'), ('a', 'n'), ('n', ' '), (' ', 'N'), ('N', 'L'), ('L', 'P'), 
+('P', 'e'), ('e', 'r')]
+"""
