@@ -1,0 +1,15 @@
+f = open('popular-names.txt', 'r')
+txt_1 = open('col1.txt', 'w+')
+txt_2 = open('col2.txt', 'w')
+
+data = f.read()
+data1 = data.split()
+for i in range(len(data1)):
+    if i % 4 == 0:
+        txt_1.write(data1[i] + '\n')
+    if i % 4 == 1:
+        txt_2.write(data1[i] + '\n')
+
+txt_1.close()
+txt_2.close()
+f.close()

@@ -1,7 +1,7 @@
 f = open('popular-names.txt', 'r')
 
 data = f.read()
-dannraku = 0
+dannraku = []
 for i in data:
     if i == '\n':
         dannraku += 1
