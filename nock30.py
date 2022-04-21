@@ -1,8 +1,16 @@
+import pandas as pd
+datafile = pd.read_csv('popular-names.txt', sep="\t",header=None)
 
-
+frequency = datafile[0].value_counts()
+print(frequency)
 
 """
 実行結果:
+James      118
+William    111
+Robert     108
+John       108
+Mary        92
 
 UNIX:
 cut -f 1 -d " " test.txt > 19.txt

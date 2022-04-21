@@ -28,7 +28,7 @@ m_file.close()
 
 """
 実行結果:
-
+split(0~N-1).txtファイルに分割
 UNIX: split -n 3 test.txt
 xaa
 xab
