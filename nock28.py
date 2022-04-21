@@ -1,20 +1,21 @@
-f = open('col1.txt', 'r')
+m_file = open('col1.txt', 'r')
 
-data = f.read()
+data = m_file.read()
 data_s = data.split()
-set = []
 
-for i in data_s:
-    if i not in set:
-        set.append(i)
+namelist = []
+for name in data_s:
+    if name not in namelist:
+        namelist.append(name)
 
 count = 0
-for i in set:
+for name in namelist:
     count += 1
 
-print(set)
+print(namelist)
 print(count)
-f.close()
+
+m_file.close()
 
 
 """
@@ -35,6 +36,7 @@ Alexander
 Alexis
 Alice
 
-
-
+リーダブルコード:
+変数の名前をわかりやすく
+段落を気にした
 """

@@ -1,13 +1,14 @@
-f = open('popular-names.txt', 'r')
-N = int(input('行数:'))
+m_file = open('popular-names.txt', 'r')
 
-data = f.read()
+data = m_file.read()
 data_split = data.split('\n')
+del data_split[-1]
 
-for i in range(N):
-    print(data_split[-N+i-1])
+N = int(input('行数:'))
+for paragraph in range(N):
+    print(data_split[-N+paragraph])
 
-f.close()
+m_file.close()
 
 
 """
@@ -21,4 +22,7 @@ Logan   M       12352   2018
 
 UNIX:tail -n 5 test.txt
 
+リーダブルコード:
+変数の名前をわかりやすく
+段落を気にした
 """

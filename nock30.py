@@ -22,4 +22,7 @@ sort -k 1 -t " " -r -n 19_sort_uniq.txt > 19_fin.txt
     108 Robert
     108 John
      92 Mary
+
+リーダブルコード:
+変数の名前をわかりやすく
 """

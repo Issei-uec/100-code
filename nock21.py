@@ -13,4 +13,7 @@ m_file.close()
 """
 実行結果:2780
 UNIX: wc -l popular-names.txt
+リーダブルコード:
+変数の名前をわかりやすく
+段落を気にした
 """

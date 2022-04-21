@@ -1,13 +1,9 @@
-from pprint import pprint
-import pandas as pd
-
 m_file = open('popular-names.txt', 'r')
 
-data = m_file.read()
-data1 = data.replace('\t', ' ')
-print(data1)
+data_tab = m_file.read()
+data_space = data_tab.replace('\t', ' ')
 
-
+print(data_space)
 m_file.close()
 
 """
@@ -20,4 +16,7 @@ Minnie F 1746 1880
 
 UNIX:tr "\t" " " <popular-names.txt> test.txt
 
+リーダブルコード:
+変数の名前をわかりやすく
+段落を気にした
 """

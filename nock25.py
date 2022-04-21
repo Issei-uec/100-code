@@ -1,10 +1,10 @@
-f = open('popular-names.txt', 'r')
+m_file = open('popular-names.txt', 'r')
+
 N = int(input('行数:'))
+for paragraph in range(N):
+    print(m_file.readline().replace("\n", ""))
 
-for i in range(N):
-    print(f.readline().replace("\n", ""))
-
-f.close()
+m_file.close()
 
 
 """
@@ -18,4 +18,7 @@ Minnie  F       1746    1880
 
 UNIX:head -n 5 test.txt
 
+リーダブルコード:
+変数の名前をわかりやすく
+段落を気にした
 """
