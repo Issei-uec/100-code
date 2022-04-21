@@ -1,12 +1,15 @@
-f = open('popular-names.txt', 'r')
+m_file = open('popular-names.txt', 'r')
+data = m_file.read()
 
-data = f.read()
-dannraku = []
+paragraph = 0
 for i in data:
     if i == '\n':
-        dannraku += 1
+        paragraph += 1
 
-print(dannraku)
+print(paragraph)
+m_file.close()
 
-f.close()
-
+"""
+実行結果:2780
+UNIX: wc -l popular-names.txt
+"""

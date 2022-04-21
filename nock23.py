@@ -13,3 +13,25 @@ for i in range(len(data1)):
 txt_1.close()
 txt_2.close()
 f.close()
+
+"""
+実行結果:
+col1:
+Mary
+Anna
+Emma
+Elizabeth
+Minnie
+
+col2:
+F
+F
+F
+F
+F
+
+UNIX:
+cut -f 1 -d " " test.txt > col1.txt
+cut -f 2 -d " " test.txt > col2.txt
+
+"""

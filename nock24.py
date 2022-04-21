@@ -11,3 +11,15 @@ for i, j in zip(data1, data2):
 txt_1_2.close()
 txt_1.close()
 txt_2.close()
+
+
+"""
+実行結果:
+Mary	F
+Anna	F
+Emma	F
+Elizabeth	F
+Minnie	F
+
+UNIX:paste -d "\t" col1.txt col2.txt > col1-2.txt
+"""
