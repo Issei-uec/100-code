@@ -9,6 +9,7 @@ for i in data:
 print(paragraph)
 m_file.close()
 
+
 """
 実行結果:2780
 UNIX: wc -l popular-names.txt
