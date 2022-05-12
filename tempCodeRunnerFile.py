@@ -1,0 +1,1 @@
+dictionary['公式国名'] = dictionary['公式国名'].rstrip()
