@@ -31,7 +31,6 @@ for i in dictionary.keys():
 for key, value in dictionary.items():
     print(key, value)
 
-
 '''
 実行結果:
 標語 {{lang|fr|[[Dieu et mon droit]]}}<br />（[[フランス語]]:[[Dieu et mon droit|神と我が権利]]）

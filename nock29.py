@@ -53,7 +53,7 @@ for i in dictionary.keys():
     dictionary[i] = re.sub(outside_link, '', dictionary[i])
 
 #2重の{{の削除、整形
-template1 = r'\{\{([^\}]*?)\|(.*?)\|([^\}]*?)\|([^\}]*?)\|([^\}]*?)\}\}'
+template1 = r'\{\{([^\}]*?)\|([^\}]*?)\|([^\}]*?)\|([^\}]*?)\|([^\}]*?)\}\}'
 for i in dictionary.keys():
     dictionary[i] = re.sub(template1, '', dictionary[i])
 
