@@ -3,7 +3,7 @@ datafile = pd.read_table('popular-names.txt', sep="\t", header=None)
 
 frequency = datafile[0].value_counts()
 print(frequency)
-
+print(datafile)
 """
 実行結果:
 James      118

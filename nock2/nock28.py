@@ -13,6 +13,7 @@ for name in namelist:
     count += 1
 
 print(namelist)
+print(len(namelist))
 print(count)
 
 m_file.close()
