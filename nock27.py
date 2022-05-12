@@ -29,3 +29,11 @@ for i in dictionary.keys():
 
 for key, value in dictionary.items():
     print(key, value)
+
+
+'''
+実行結果:
+
+
+
+'''
