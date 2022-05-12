@@ -20,5 +20,5 @@ Population density UK 2011 census.png
 2019 Greenwich Peninsula & Canary Wharf.jpg
 
 リーダブルコード:
-変数をわかりやすくした
+変数をわかりやすくした(p10)
 '''

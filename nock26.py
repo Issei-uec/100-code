@@ -41,5 +41,5 @@ for key, value in dictionary.items():
 国旗画像 Flag of the United Kingdom.svg
 
 リーダブルコード:
-変数をわかりやすくした
+変数をわかりやすくした(p10)
 '''

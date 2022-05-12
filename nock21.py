@@ -13,5 +13,5 @@ print(UK.text_output("イギリス"))
 |公式国名 = {{lang|en|United Kingdom of Great Britain and Northern Ireland}}<ref>英語以外での正式国名:<br />
 
 リーダブルコード:
-変数をわかりやすくした
+変数をわかりやすくした(p10)
 '''
