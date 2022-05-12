@@ -52,5 +52,6 @@ for key, value in dictionary.items():
 位置画像 United Kingdom (+overseas territories) in the World (+Antarctica claims).svg
 
 リーダブルコード:
-変数をわかりやすくした
+変数をわかりやすくした。
+ごちゃごちゃしているので、コメントを入れてわかりやすくした。
 '''
