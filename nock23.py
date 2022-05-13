@@ -1,7 +1,7 @@
 import re
 import UK
 
-target = r'\[\[Category:(.*)\]\]'
+target = r'\[\[Category:([^\|]*)\|.*?\]\]'
 list_target = re.findall(target, UK.text_output("イギリス"))
 
 for category_name in list_target:

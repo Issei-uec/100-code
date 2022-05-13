@@ -1,7 +1,7 @@
 import re
 import UK
 
-target = r'ファイル:(.*?)\|'
+target = r'\[\[ファイル:(.*?)\|'
 list_target = re.findall(target, UK.text_output("イギリス"))
 
 for file in list_target:
