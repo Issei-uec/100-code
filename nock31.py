@@ -8,9 +8,9 @@ for line in neko:
         list.append({"surface": nekon[0], "base": nekon[7], "pos": nekon[1], "pos1": nekon[2]})
 neko.close()
 
-for i in list:
-    if i["pos"] == "動詞":
-        print(i["surface"])
+for word in list:
+    if word["pos"] == "動詞":
+        print(word["surface"])
 
 """
 実行結果：
@@ -31,5 +31,6 @@ for i in list:
 着せる
 
 リーダブルコード：
-
+変数をわかりやすくした(p10)
+if文の並びに気を付けた(p86)
 """

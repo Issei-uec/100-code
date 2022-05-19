@@ -59,3 +59,9 @@ for i in range(10):
 left = np.array(x)
 height = np.array(y)
 plt.bar(left, height)
+
+"""
+リーダブルコード：
+変数をわかりやすくした(p10)
+if文の並びに気を付けた(p86)
+"""

@@ -31,3 +31,9 @@ plt.hist(frequency,bins=100, range=(0, 9103))
 plt.show()
 plt.hist(frequency,bins=100, range=(0, 100))
 plt.show()
+
+"""
+リーダブルコード：
+変数をわかりやすくした(p10)
+if文の並びに気を付けた(p86)
+"""

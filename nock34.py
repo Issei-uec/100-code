@@ -12,9 +12,9 @@ noun_list = []
 max_list = []
 max_len = 0
 
-for i in list:
-    if i["pos"] == "名詞":
-        noun_list.append(i["surface"])
+for word in list:
+    if word["pos"] == "名詞":
+        noun_list.append(word["surface"])
         max_len = len(noun_list)
     
     else:
@@ -35,5 +35,6 @@ for i in list:
 ['改良', '首', 'きり', '器械']
 
 リーダブルコード：
-
+変数をわかりやすくした(p10)
+if文の並びに気を付けた(p86)
 """

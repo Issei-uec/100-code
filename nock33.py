@@ -10,20 +10,20 @@ neko.close()
 
 N_in = []
 no_in = []
-for i in list:
+for word in list:
     if len(N_in) != 0:
-        if i["pos"] == "名詞":        
+        if word["pos"] == "名詞":        
             if len(no_in) != 0:
-                print(N_in[0] + "の" + i["surface"])
+                print(N_in[0] + "の" + word["surface"])
                 N_in = []
                 no_in = []
-        elif i["surface"] == "の":
-            no_in = [i["surface"]]
+        elif word["surface"] == "の":
+            no_in = [word["surface"]]
         else: 
             N_in = []
             no_in = []
-    elif i["pos"] == "名詞":
-        N_in = [i["surface"]]
+    elif word["pos"] == "名詞":
+        N_in = [word["surface"]]
 
     
 """
@@ -60,5 +60,6 @@ for i in list:
 時機の到来
 
 リーダブルコード：
-
+変数をわかりやすくした(p10)
+if文の並びに気を付けた(p86)
 """
