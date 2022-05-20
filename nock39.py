@@ -25,7 +25,7 @@ sort_dic_word = sorted(dic_word.items(), key=lambda x:x[1], reverse=True)
 
 frequency = []
 rank = []
-now_rank = 1
+now_rank = 0
 
 for word in sort_dic_word:
     frequency.append(word[1])
