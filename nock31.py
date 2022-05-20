@@ -7,10 +7,13 @@ for line in neko:
         nekon = re.split(',|\t', line)
         list.append({"surface": nekon[0], "base": nekon[7], "pos": nekon[1], "pos1": nekon[2]})
 neko.close()
-
+verb_list = []
 for word in list:
     if word["pos"] == "動詞":
-        print(word["surface"])
+        if not word["surface"] in verb_list:
+            verb_list.append(word["surface"])
+
+print(verb_list[0:5])
 
 """
 実行結果：
