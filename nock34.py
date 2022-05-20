@@ -9,7 +9,6 @@ for line in neko:
 neko.close()
 
 noun_list = []
-max_list = []
 max_len = 0
 
 for word in list:
