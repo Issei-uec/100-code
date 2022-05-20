@@ -56,9 +56,9 @@ for i in range(10):
     x.append(sort_dic_word2[i][0])
     y.append(sort_dic_word2[i][1])
 
-left = np.array(x)
+beside = np.array(x)
 height = np.array(y)
-plt.bar(left, height)
+plt.bar(beside, height)
 
 """
 リーダブルコード：
