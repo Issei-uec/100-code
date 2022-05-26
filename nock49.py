@@ -56,6 +56,68 @@ for line in _data[:-1]:
     temp.append(morph)
 
 
+def make_word(morph):
+    word_m = ""
+    for word in morph.morphs:
+        if word.pos != "記号":
+            word_m += word.surface
+    return word_m
+
+def make_word1(morph, X):
+    word_m = ""
+    i = 1
+    for word in morph.morphs:
+        if word.pos != "記号":
+            if word.pos == "名詞" and i == 1:
+                word_m += X
+                i = 0
+            else:
+                word_m += word.surface
+    return word_m
+
+def make_pass(morph, ans, list_num, j):
+    for word in morph.morphs:
+        if s_list[list_num][int(morph.dst)].dst == -1:
+            return str(ans) + " => " + str(make_word(s_list[list_num][int(morph.dst)]))
+        else:
+            if s_list[list_num][int(morph.dst)].dst == int(j):
+                return str(ans) + " => " + str(make_word1(s_list[list_num][int(morph.dst)], "Y"))
+                
+            else:
+                return str(ans) + " => " + str(make_pass(s_list[list_num][int(morph.dst)], make_word(s_list[list_num][int(morph.dst)]), list_num, j)) 
+
+def pass_list(index, list_num):
+    for word in s_list[list_num][index].morphs:
+        if s_list[list_num][index].dst == -1:
+            return list_noun
+        else:
+            list_noun.append(s_list[list_num][index].dst)
+            return pass_list(s_list[list_num][index].dst, list_num)
+import itertools
+j_list = []
+list_noun = []
+noun_index_list = []
+Pass_list = []
+for index, chunk in enumerate(s_list[1]):
+    for word in chunk.morphs:
+        if word.pos == "名詞":
+            noun_index_list.append(index)
+c = itertools.combinations(noun_index_list, 2)
+for i, j in c:
+    if i < j:
+        j_list.append(j)
+        list_noun.append(i)
+        if j in (pass_list(i, 1)):
+            Pass_list.append(make_pass(s_list[1][i], make_word1(s_list[1][i], "X"), 1, j))
+            s_Pass_list = sorted(set(Pass_list))
+            for ps in s_Pass_list:
+                print(ps)
+                
+
+#間に合わなかった
+#方向性としては、iの経路上のindexをリストに入れ、jがその中にある時とない時で場合分け(問題文の場合分け)
+#X, Yの置き換えの方法は分からず
+
 
 
 """
