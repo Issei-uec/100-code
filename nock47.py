@@ -25,7 +25,6 @@ s_list = []
 #Chunkオブジェクト
 sent = []
 #形態素解析結果のMorphオブジェクトリスト
-temp = []
 chunk = None
 for line in _data[:-1]:
   #集合[]で「\t」と「,」と「　(スペース)」を区切りを指定します。
@@ -52,7 +51,7 @@ for line in _data[:-1]:
   else:
     morph = Morph(text)
     chunk.morphs.append(morph)
-    temp.append(morph)
+ 
 
 
 particle = []
