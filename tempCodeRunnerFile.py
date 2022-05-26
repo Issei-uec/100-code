@@ -1,1 +1,0 @@
-    if word["surface"] != "。" and word["surface"] != "、" and word["surface"] != "「" and word["surface"] != "」":

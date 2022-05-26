@@ -1,7 +1,7 @@
 import re
 class Morph:
   def __init__(self, sentence):
-    word = re.split(',|\t', sentence)
+    word = re.split(r',|\s', sentence)
     self.surface = word[0]
     self.base = word[7]
     self.pos = word[1]

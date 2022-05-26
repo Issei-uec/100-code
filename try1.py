@@ -13,37 +13,39 @@ class Chunk():
     self.dst = dst
     self.srcs = []
 
-saki = 0
 s_list = []
+saki = 0
 morph = []
-chunk = None
+chunk = []
 chunk1 = []
 AI = open("ai.ja.txt.parsed", "r", encoding="utf-8")
 for line in AI:
     if line[0] == "*":
         word = re.split(r',|\s', line)
         if len(morph) > 0:
-            chunk = Chunk(morph, saki)
-            chunk1.append(chunk)
+            chunk.append(Chunk(morph, saki))
             morph = []
+
         saki = int(re.search(r'(.*?)D', word[2]).group(1))
     elif line != "EOS\n":
         morph.append(Morph(line))
     else:
-        chunk1.append(Chunk(morph, saki))
-        if chunk1:
-            for i, c in enumerate(chunk1, 0):
+        chunk.append(Chunk(morph, saki))
+        if chunk:
+            for i, c in enumerate(chunk, 0):
                 if c.dst != -1:
-                    chunk1[c.dst].srcs.append(i)
-        s_list.append(chunk1)
-        chunk1 = []               
+                    chunk[c.dst].srcs.append(i)
+                s_list.append(chunk)
+        chunk = []               
         morph = [] 
         word = None
-        chunk = None
 #else:
 
 
 AI.close()
-
-for i in s_list[2]:
+"""
+for i in s_list[3]:
     print([j.surface for j in i.morphs], i.dst, i.srcs)
+"""
+for i in range(3):
+    print(s_list[i])
