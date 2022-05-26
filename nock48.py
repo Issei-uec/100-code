@@ -1,4 +1,5 @@
-
+#41が直前までうまくいかなかったため、～49まで解答で行っている
+#時間のある時に自作に変更予定
 path = "ai.ja.txt.parsed"
 import re
 with open(path, encoding='utf-8') as f:
