@@ -51,11 +51,7 @@ for line in _data[:-1]:
     morph = Morph(text)
     chunk.morphs.append(morph)
     temp.append(morph)
-"""
-for i in s_list:
-    for chunk in i:
-        for word in chunk.morphs:
-"""
+
 
 particle = []
 flame_info = []
@@ -92,3 +88,14 @@ for sentence in s_list:
                   sort_flame_info = []
                   v_flame = ""
 f.close()
+
+"""
+実行結果：
+行動を代わっ	に を	人間に 知的行動を
+判断をする	を	推論判断を
+処理を用い	を	記号処理を
+記述をする	と を	主体と 記述を
+注目を集め	が を	サポートベクターマシンが 注目を
+経験を行う学習を行う	に を	元に 経験を 学習を
+
+"""

@@ -1,3 +1,5 @@
+#41が直前までうまくいかなかったため、解答で行っている
+#nock41は自作
 path = "ai.ja.txt.parsed"
 import re
 with open(path, encoding='utf-8') as f:
@@ -51,11 +53,7 @@ for line in _data[:-1]:
     morph = Morph(text)
     chunk.morphs.append(morph)
     temp.append(morph)
-"""
-for i in s_list:
-    for chunk in i:
-        for word in chunk.morphs:
-"""
+
 
 particle = []
 p_particle = ""
@@ -78,3 +76,18 @@ for sentence in s_list:
 
 f.close()
 
+"""
+実行結果：
+!cat nock45.txt  | sort | uniq -c | sort -nr | head -n 5
+    194 する	を
+    161 する	て を
+     87 する	て で は
+     39 いる	で に の は
+     10 られる	が
+!cat nock45.txt | grep '行う' | sort | uniq -c | sort -nr | head -n 5
+      9 行う	を
+      5 行う	て に
+      4 行う	て に を
+      1 行う	まで を
+      1 行う	から
+"""

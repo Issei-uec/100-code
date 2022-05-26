@@ -51,11 +51,7 @@ for line in _data[:-1]:
     morph = Morph(text)
     chunk.morphs.append(morph)
     temp.append(morph)
-"""
-for i in s_list:
-    for chunk in i:
-        for word in chunk.morphs:
-"""
+
 
 particle = []
 flame_info = []
@@ -88,3 +84,14 @@ for sentence in s_list:
                   v_flame = ""
 f.close()
 
+"""
+実行結果：
+用いる	を	道具を
+する	て を	用いて 知能を
+指す	を	一分野を
+代わる	に を	人間に 知的行動を
+行う	て に	代わって コンピューターに
+せる	て に	代わって コンピューターに
+する	と も	研究分野とも
+
+"""

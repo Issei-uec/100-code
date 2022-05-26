@@ -56,7 +56,7 @@ from graphviz import Graph
 from graphviz import Digraph
 
 dg = Digraph(format='png')
-
+dg.attr('node', fontname='MS Gothic')
 moto = ""
 saki = ""
 for m in s_list[1]:
@@ -69,5 +69,5 @@ for m in s_list[1]:
     dg.edge(moto, saki)
     moto = saki = ""
 
-dg.attr('node', shape='box', fontname='MS Gothic')
 dg
+
