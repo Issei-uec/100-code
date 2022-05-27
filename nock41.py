@@ -7,7 +7,7 @@ class Morph:
     self.pos = word[1]
     self.pos1 = word[2]
 
-class Chunk():
+class Chunk:
   def __init__(self, morphs, dst):
     self.morphs = morphs
     self.dst = dst
