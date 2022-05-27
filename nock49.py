@@ -98,7 +98,9 @@ def pass_list(index, list_num):
         else:
             list_noun.append(s_list[list_num][index].dst)
             return pass_list(s_list[list_num][index].dst, list_num)
+  
 import itertools
+
 j_list = []
 list_noun = []
 noun_index_list = []
