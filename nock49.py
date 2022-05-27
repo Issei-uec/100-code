@@ -86,6 +86,11 @@ def make_pass(morph, ans, list_num, j):
             else:
                 return str(ans) + " => " + str(make_pass(s_list[list_num][int(morph.dst)], make_word(s_list[list_num][int(morph.dst)]), list_num, j)) 
 
+#間に合わなかった
+#方向性としては、iの経路上のindexをリストに入れ、jがその中にある時とない時で場合分け(問題文の場合分け)
+#jが中にある場合を行おうと思ったが、上手くいかず挫折
+#関数を用いるとややこしい
+
 def pass_list(index, list_num):
     for word in s_list[list_num][index].morphs:
         if s_list[list_num][index].dst == -1:
@@ -114,12 +119,6 @@ for i, j in c:
             for ps in s_Pass_list:
                 print(ps)
                 
-
-#間に合わなかった
-#方向性としては、iの経路上のindexをリストに入れ、jがその中にある時とない時で場合分け(問題文の場合分け)
-#jが中にある場合を行おうと思ったが、上手くいかず挫折
-#関数を用いるとややこしい
-
 
 """
 実行結果：
