@@ -1,0 +1,420 @@
+python pytorch01.py
+Ones Tensor: 
+ tensor([[1, 1],
+        [1, 1]]) 
+
+Random Tensor: 
+ tensor([[0.8096, 0.0736],
+        [0.1099, 0.9594]]) 
+
+Random Tensor: 
+ tensor([[0.2932, 0.2756, 0.1179],
+        [0.4539, 0.2143, 0.7783]]) 
+
+Ones Tensor: 
+ tensor([[1., 1., 1.],
+        [1., 1., 1.]]) 
+
+Zeros Tensor: 
+ tensor([[0., 0., 0.],
+        [0., 0., 0.]])
+Shape of tensor: torch.Size([3, 4])
+Datatype of tensor: torch.float32
+Device tensor is stored on: cpu
+First row:  tensor([1., 1., 1., 1.])
+First column:  tensor([1., 1., 1., 1.])
+Last column: tensor([1., 1., 1., 1.])
+tensor([[1., 0., 1., 1.],
+        [1., 0., 1., 1.],
+        [1., 0., 1., 1.],
+        [1., 0., 1., 1.]])
+tensor([[1., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1., 1.],
+        [1., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1., 1.],
+        [1., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1., 1.],
+        [1., 0., 1., 1., 1., 0., 1., 1., 1., 0., 1., 1.]])
+12.0 <class 'float'>
+tensor([[1., 0., 1., 1.],
+        [1., 0., 1., 1.],
+        [1., 0., 1., 1.],
+        [1., 0., 1., 1.]]) 
+
+tensor([[6., 5., 6., 6.],
+        [6., 5., 6., 6.],
+        [6., 5., 6., 6.],
+        [6., 5., 6., 6.]])
+t: tensor([1., 1., 1., 1., 1.])
+n: [1. 1. 1. 1. 1.]
+t: tensor([2., 2., 2., 2., 2.])
+n: [2. 2. 2. 2. 2.]
+t: tensor([2., 2., 2., 2., 2.], dtype=torch.float64)
+n: [2. 2. 2. 2. 2.]
+g06:~> python pytorch02.py
+Matplotlib is building the font cache using fc-list. This may take a moment.
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-images-idx3-ubyte.gz to data/FashionMNIST/raw/train-images-idx3-ubyte.gz
+ 99%|████████████████████████████████████████████████████████████████████████████████▍| 26230784/26421880 [00:30<00:00, 2775291.53it/s]Extracting data/FashionMNIST/raw/train-images-idx3-ubyte.gz to data/FashionMNIST/raw
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw/train-labels-idx1-ubyte.gz
+32768it [00:00, 5083365.52it/s]
+Extracting data/FashionMNIST/raw/train-labels-idx1-ubyte.gz to data/FashionMNIST/raw
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz
+                                                                                                                                      Extracting data/FashionMNIST/raw/t10k-images-idx3-ubyte.gz to data/FashionMNIST/raw█████▋ | 4349952/4422102 [00:10<00:00, 548695.46it/s]
+Downloading http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz
+8192it [00:00, 1210062.98it/s]
+Extracting data/FashionMNIST/raw/t10k-labels-idx1-ubyte.gz to data/FashionMNIST/raw
+Processing...it/s]
+/opt/conda/conda-bld/pytorch_1591914880026/work/torch/csrc/utils/tensor_numpy.cpp:141: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program.
+Done!
+Traceback (most recent call last):
+  File "pytorch02.py", line 28, in <module>
+    from torchvision.io import read_image
+ImportError: cannot import name 'read_image' from 'torchvision.io' (/usr/local/anaconda3/lib/python3.7/site-packages/torchvision/io/__init__.py)
+26427392it [00:45, 578517.58it/s]                                                                                                      
+4423680it [00:14, 309918.99it/s]                                                                                                       
+g06:~> python pytorch03.py
+g06:~> python pytorch04.py
+Using cuda device
+NeuralNetwork(
+  (flatten): Flatten()
+  (linear_relu_stack): Sequential(
+    (0): Linear(in_features=784, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=512, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=512, out_features=10, bias=True)
+    (5): ReLU()
+  )
+)
+Predicted class: tensor([4], device='cuda:0')
+torch.Size([3, 28, 28])
+torch.Size([3, 784])
+torch.Size([3, 20])
+Before ReLU: tensor([[-0.0536, -0.1514, -0.3729, -0.1936, -0.0970,  0.0806,  0.0438, -0.0043,
+         -1.3843, -0.2746,  0.0615,  0.1461, -0.3331,  0.0401, -0.0071, -0.4136,
+          0.5013,  0.3136, -0.1807, -0.4469],
+        [ 0.3584, -0.3190, -0.2745, -0.0864,  0.2014,  0.2192, -0.1046, -0.0429,
+         -1.1579, -0.2265,  0.0916,  0.3758,  0.0114,  0.3996,  0.1054, -0.0312,
+          0.5365, -0.0717, -0.1488, -0.0959],
+        [ 0.2226, -0.0648,  0.1389, -0.1717, -0.1242, -0.1638,  0.2427,  0.1824,
+         -0.8255, -0.3107, -0.1817,  0.1868,  0.0178,  0.0964,  0.0055, -0.1552,
+          0.4135,  0.1039, -0.1117, -0.0261]], grad_fn=<AddmmBackward>)
+
+
+After ReLU: tensor([[0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0806, 0.0438, 0.0000, 0.0000,
+         0.0000, 0.0615, 0.1461, 0.0000, 0.0401, 0.0000, 0.0000, 0.5013, 0.3136,
+         0.0000, 0.0000],
+        [0.3584, 0.0000, 0.0000, 0.0000, 0.2014, 0.2192, 0.0000, 0.0000, 0.0000,
+         0.0000, 0.0916, 0.3758, 0.0114, 0.3996, 0.1054, 0.0000, 0.5365, 0.0000,
+         0.0000, 0.0000],
+        [0.2226, 0.0000, 0.1389, 0.0000, 0.0000, 0.0000, 0.2427, 0.1824, 0.0000,
+         0.0000, 0.0000, 0.1868, 0.0178, 0.0964, 0.0055, 0.0000, 0.4135, 0.1039,
+         0.0000, 0.0000]], grad_fn=<ReluBackward0>)
+Model structure:  NeuralNetwork(
+  (flatten): Flatten()
+  (linear_relu_stack): Sequential(
+    (0): Linear(in_features=784, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=512, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=512, out_features=10, bias=True)
+    (5): ReLU()
+  )
+) 
+
+
+Layer: linear_relu_stack.0.weight | Size: torch.Size([512, 784]) | Values : tensor([[ 0.0191, -0.0026,  0.0356,  ...,  0.0133, -0.0209,  0.0300],
+        [-0.0096,  0.0108, -0.0225,  ...,  0.0206,  0.0072,  0.0343]],
+       device='cuda:0', grad_fn=<SliceBackward>) 
+
+Layer: linear_relu_stack.0.bias | Size: torch.Size([512]) | Values : tensor([-0.0055, -0.0214], device='cuda:0', grad_fn=<SliceBackward>) 
+
+Layer: linear_relu_stack.2.weight | Size: torch.Size([512, 512]) | Values : tensor([[ 0.0255,  0.0164,  0.0437,  ...,  0.0162, -0.0372, -0.0432],
+        [ 0.0269, -0.0026, -0.0081,  ...,  0.0141,  0.0415,  0.0033]],
+       device='cuda:0', grad_fn=<SliceBackward>) 
+
+Layer: linear_relu_stack.2.bias | Size: torch.Size([512]) | Values : tensor([-0.0145, -0.0004], device='cuda:0', grad_fn=<SliceBackward>) 
+
+Layer: linear_relu_stack.4.weight | Size: torch.Size([10, 512]) | Values : tensor([[-0.0405,  0.0286, -0.0196,  ...,  0.0244,  0.0045, -0.0290],
+        [-0.0359,  0.0436, -0.0149,  ...,  0.0279, -0.0371,  0.0208]],
+       device='cuda:0', grad_fn=<SliceBackward>) 
+
+Layer: linear_relu_stack.4.bias | Size: torch.Size([10]) | Values : tensor([-0.0340, -0.0148], device='cuda:0', grad_fn=<SliceBackward>) 
+
+g06:~> python pytorch05.py
+Gradient function for z = <AddBackward0 object at 0x7f00384efcd0>
+Gradient function for loss = <BinaryCrossEntropyWithLogitsBackward object at 0x7f00384efcd0>
+tensor([[0.1174, 0.0729, 0.3302],
+        [0.1174, 0.0729, 0.3302],
+        [0.1174, 0.0729, 0.3302],
+        [0.1174, 0.0729, 0.3302],
+        [0.1174, 0.0729, 0.3302]])
+tensor([0.1174, 0.0729, 0.3302])
+True
+False
+False
+First call
+ tensor([[4., 2., 2., 2., 2.],
+        [2., 4., 2., 2., 2.],
+        [2., 2., 4., 2., 2.],
+        [2., 2., 2., 4., 2.],
+        [2., 2., 2., 2., 4.]])
+
+Second call
+ tensor([[8., 4., 4., 4., 4.],
+        [4., 8., 4., 4., 4.],
+        [4., 4., 8., 4., 4.],
+        [4., 4., 4., 8., 4.],
+        [4., 4., 4., 4., 8.]])
+
+Call after zeroing gradients
+ tensor([[4., 2., 2., 2., 2.],
+        [2., 4., 2., 2., 2.],
+        [2., 2., 4., 2., 2.],
+        [2., 2., 2., 4., 2.],
+        [2., 2., 2., 2., 4.]])
+g06:~> python pytorch06.py
+Epoch 1
+-------------------------------
+loss: 2.301855  [    0/60000]
+loss: 2.299618  [ 6400/60000]
+loss: 2.292438  [12800/60000]
+loss: 2.282864  [19200/60000]
+loss: 2.277488  [25600/60000]
+loss: 2.271330  [32000/60000]
+loss: 2.272211  [38400/60000]
+loss: 2.260341  [44800/60000]
+loss: 2.249113  [51200/60000]
+loss: 2.247526  [57600/60000]
+Test Error: 
+ Accuracy: 43.6%, Avg loss: 0.035060 
+
+Epoch 2
+-------------------------------
+loss: 2.245884  [    0/60000]
+loss: 2.243968  [ 6400/60000]
+loss: 2.220424  [12800/60000]
+loss: 2.211032  [19200/60000]
+loss: 2.201856  [25600/60000]
+loss: 2.184032  [32000/60000]
+loss: 2.203600  [38400/60000]
+loss: 2.167227  [44800/60000]
+loss: 2.143122  [51200/60000]
+loss: 2.165316  [57600/60000]
+Test Error: 
+ Accuracy: 43.5%, Avg loss: 0.033387 
+
+Epoch 3
+-------------------------------
+loss: 2.149588  [    0/60000]
+loss: 2.152057  [ 6400/60000]
+loss: 2.093324  [12800/60000]
+loss: 2.090641  [19200/60000]
+loss: 2.084865  [25600/60000]
+loss: 2.048374  [32000/60000]
+loss: 2.089928  [38400/60000]
+loss: 2.017557  [44800/60000]
+loss: 1.973842  [51200/60000]
+loss: 2.048080  [57600/60000]
+Test Error: 
+ Accuracy: 43.7%, Avg loss: 0.030880 
+
+Epoch 4
+-------------------------------
+loss: 2.003928  [    0/60000]
+loss: 2.013141  [ 6400/60000]
+loss: 1.907872  [12800/60000]
+loss: 1.922937  [19200/60000]
+loss: 1.942746  [25600/60000]
+loss: 1.877293  [32000/60000]
+loss: 1.956110  [38400/60000]
+loss: 1.847678  [44800/60000]
+loss: 1.793380  [51200/60000]
+loss: 1.933605  [57600/60000]
+Test Error: 
+ Accuracy: 47.9%, Avg loss: 0.028448 
+
+Epoch 5
+-------------------------------
+loss: 1.858917  [    0/60000]
+loss: 1.881021  [ 6400/60000]
+loss: 1.740817  [12800/60000]
+loss: 1.786229  [19200/60000]
+loss: 1.824049  [25600/60000]
+loss: 1.734802  [32000/60000]
+loss: 1.852228  [38400/60000]
+loss: 1.724222  [44800/60000]
+loss: 1.663580  [51200/60000]
+loss: 1.851450  [57600/60000]
+Test Error: 
+ Accuracy: 52.8%, Avg loss: 0.026703 
+
+Epoch 6
+-------------------------------
+loss: 1.747954  [    0/60000]
+loss: 1.783472  [ 6400/60000]
+loss: 1.621226  [12800/60000]
+loss: 1.692008  [19200/60000]
+loss: 1.730651  [25600/60000]
+loss: 1.630621  [32000/60000]
+loss: 1.775123  [38400/60000]
+loss: 1.639310  [44800/60000]
+loss: 1.572839  [51200/60000]
+loss: 1.788661  [57600/60000]
+Test Error: 
+ Accuracy: 55.1%, Avg loss: 0.025410 
+
+Epoch 7
+-------------------------------
+loss: 1.662022  [    0/60000]
+loss: 1.710478  [ 6400/60000]
+loss: 1.531055  [12800/60000]
+loss: 1.620182  [19200/60000]
+loss: 1.657332  [25600/60000]
+loss: 1.550118  [32000/60000]
+loss: 1.715961  [38400/60000]
+loss: 1.576701  [44800/60000]
+loss: 1.503569  [51200/60000]
+loss: 1.737913  [57600/60000]
+Test Error: 
+ Accuracy: 56.3%, Avg loss: 0.024404 
+
+Epoch 8
+-------------------------------
+loss: 1.592486  [    0/60000]
+loss: 1.654327  [ 6400/60000]
+loss: 1.459298  [12800/60000]
+loss: 1.561474  [19200/60000]
+loss: 1.600302  [25600/60000]
+loss: 1.487120  [32000/60000]
+loss: 1.669438  [38400/60000]
+loss: 1.530692  [44800/60000]
+loss: 1.450342  [51200/60000]
+loss: 1.698389  [57600/60000]
+Test Error: 
+ Accuracy: 56.9%, Avg loss: 0.023625 
+
+Epoch 9
+-------------------------------
+loss: 1.537183  [    0/60000]
+loss: 1.610875  [ 6400/60000]
+loss: 1.402163  [12800/60000]
+loss: 1.514272  [19200/60000]
+loss: 1.557645  [25600/60000]
+loss: 1.438505  [32000/60000]
+loss: 1.635041  [38400/60000]
+loss: 1.495104  [44800/60000]
+loss: 1.408912  [51200/60000]
+loss: 1.668251  [57600/60000]
+Test Error: 
+ Accuracy: 57.3%, Avg loss: 0.023028 
+
+Epoch 10
+-------------------------------
+loss: 1.492829  [    0/60000]
+loss: 1.576298  [ 6400/60000]
+loss: 1.357049  [12800/60000]
+loss: 1.476349  [19200/60000]
+loss: 1.525106  [25600/60000]
+loss: 1.401087  [32000/60000]
+loss: 1.607266  [38400/60000]
+loss: 1.468733  [44800/60000]
+loss: 1.377064  [51200/60000]
+loss: 1.645572  [57600/60000]
+Test Error: 
+ Accuracy: 57.6%, Avg loss: 0.022563 
+
+Done!
+g06:~> python pytorch07.py
+Downloading: "https://download.pytorch.org/models/vgg16-397923af.pth" to /home2/y2019/o1910142/.cache/torch/checkpoints/vgg16-397923af.pth
+100%|████████████████████████████████████████████████████████████████████████████████████████████████| 528M/528M [00:04<00:00, 112MB/s]
+g06:~> python pytorch08.py
+Shape of X [N, C, H, W]:  torch.Size([64, 1, 28, 28])
+Shape of y:  torch.Size([64]) torch.int64
+Using cuda device
+NeuralNetwork(
+  (flatten): Flatten()
+  (linear_relu_stack): Sequential(
+    (0): Linear(in_features=784, out_features=512, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=512, out_features=512, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=512, out_features=10, bias=True)
+    (5): ReLU()
+  )
+)
+Epoch 1
+-------------------------------
+loss: 2.304059  [    0/60000]
+loss: 2.294910  [ 6400/60000]
+loss: 2.288763  [12800/60000]
+loss: 2.292832  [19200/60000]
+loss: 2.269500  [25600/60000]
+loss: 2.264742  [32000/60000]
+loss: 2.259129  [38400/60000]
+loss: 2.247144  [44800/60000]
+loss: 2.241646  [51200/60000]
+loss: 2.238816  [57600/60000]
+Test Error: 
+ Accuracy: 35.2%, Avg loss: 0.035149 
+
+Epoch 2
+-------------------------------
+loss: 2.213501  [    0/60000]
+loss: 2.208793  [ 6400/60000]
+loss: 2.203790  [12800/60000]
+loss: 2.244518  [19200/60000]
+loss: 2.166898  [25600/60000]
+loss: 2.177043  [32000/60000]
+loss: 2.169151  [38400/60000]
+loss: 2.147374  [44800/60000]
+loss: 2.146397  [51200/60000]
+loss: 2.147085  [57600/60000]
+Test Error: 
+ Accuracy: 36.4%, Avg loss: 0.033719 
+
+Epoch 3
+-------------------------------
+loss: 2.092324  [    0/60000]
+loss: 2.087199  [ 6400/60000]
+loss: 2.085019  [12800/60000]
+loss: 2.174052  [19200/60000]
+loss: 2.017469  [25600/60000]
+loss: 2.053329  [32000/60000]
+loss: 2.039322  [38400/60000]
+loss: 2.009191  [44800/60000]
+loss: 2.022352  [51200/60000]
+loss: 2.015850  [57600/60000]
+Test Error: 
+ Accuracy: 38.1%, Avg loss: 0.031848 
+
+Epoch 4
+-------------------------------
+loss: 1.940709  [    0/60000]
+loss: 1.940117  [ 6400/60000]
+loss: 1.947835  [12800/60000]
+loss: 2.084770  [19200/60000]
+loss: 1.853492  [25600/60000]
+loss: 1.924219  [32000/60000]
+loss: 1.894465  [38400/60000]
+loss: 1.874839  [44800/60000]
+loss: 1.894507  [51200/60000]
+loss: 1.879361  [57600/60000]
+Test Error: 
+ Accuracy: 40.0%, Avg loss: 0.030026 
+
+Epoch 5
+-------------------------------
+loss: 1.795393  [    0/60000]
+loss: 1.809313  [ 6400/60000]
+loss: 1.828635  [12800/60000]
+loss: 1.996899  [19200/60000]
+loss: 1.720051  [25600/60000]
+loss: 1.817976  [32000/60000]
+loss: 1.769491  [38400/60000]
+loss: 1.766593  [44800/60000]
+loss: 1.781996  [51200/60000]
+loss: 1.772078  [57600/60000]
+Test Error: 
+ Accuracy: 41.0%, Avg loss: 0.028479 
+
+Done!
+Saved PyTorch Model State to model.pth
+Predicted: "Ankle boot", Actual: "Ankle boot"
